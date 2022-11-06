@@ -34,6 +34,13 @@ Requirements:
 1. You need a RabbitMQ server running. Run the server according to the instructions for your OS, for example:
     ```bash
     $ rabbitmq-server
+    # if using Ubuntu 22.04 and you get an error 
+    # indicating a problem binding to a port (e.g., 
+    # "ERROR: could not bind to distribution port 25672"), 
+    # then try these steps which assume your port is 25672:
+    # $ sudo lsof -i :25672  #assume this returns <PID> 1234
+    # $ sudo kill 1234
+    # $ sudo rabbitmq-server
     ```
 1. To start the Multiplication microservice, you can use the command line with the included Maven wrapper:
     ```bash
