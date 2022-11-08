@@ -45,10 +45,14 @@ Requirements:
 1. To start the Multiplication microservice, you can use the command line with the included Maven wrapper:
     ```bash
     multiplication$ ./mvnw spring-boot:run
+   # You can also just run: 
+   # multiplication$ mvn spring-boot:run
     ```
 2. To start the Gamification microservice, you do the same from its corresponding folder:
     ```bash
-    gamification ./mvnw spring-boot:run
+    gamification$ ./mvnw spring-boot:run
+    # You can also just run: 
+    # gamification mvn spring-boot:run
     ```
 2. The React application can be started with npm. First, you need to download the dependencies with:
     ```bash
