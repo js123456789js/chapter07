@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @ExtendWith(SpringExtension.class)
 @AutoConfigureJsonTesters
 @WebMvcTest(UserController.class)
-public class UserControllerTest {
+class UserControllerTest {
     @MockBean
     private UserRepository userRepository;
 
@@ -36,7 +36,7 @@ public class UserControllerTest {
     private JacksonTester<List<User>> jsonRequestUser;
 
     @Test
-    public void getUserIds() throws Exception {
+    void getUserIds() throws Exception {
         // given
         User user1 = new User(1L, "jane");
         User user2 = new User(2L, "john");

@@ -12,7 +12,7 @@ import static org.assertj.core.api.BDDAssertions.then;
 import static org.mockito.BDDMockito.given;
 
 @ExtendWith(MockitoExtension.class)
-public class ChallengeGeneratorServiceTest {
+class ChallengeGeneratorServiceTest {
 
     private ChallengeGeneratorService challengeGeneratorService;
 
@@ -25,7 +25,7 @@ public class ChallengeGeneratorServiceTest {
     }
 
     @Test
-    public void generateRandomFactorIsBetweenExpectedLimits() {
+    void generateRandomFactorIsBetweenExpectedLimits() {
         // 89 is max - min range
         given(random.nextInt(89)).willReturn(20, 30);
 

@@ -1,8 +1,6 @@
 package microservices.book.gamification.game;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import microservices.book.gamification.game.domain.LeaderBoardRow;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +23,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @ExtendWith(SpringExtension.class)
 @AutoConfigureJsonTesters
 @WebMvcTest(LeaderBoardController.class)
-public class LeaderBoardControllerTest {
+class LeaderBoardControllerTest {
 
     @MockBean
     private LeaderBoardService leaderBoardService;
@@ -37,7 +35,7 @@ public class LeaderBoardControllerTest {
     private JacksonTester<List<LeaderBoardRow>> json;
 
     @Test
-    public void getLeaderBoardTest() throws Exception {
+    void getLeaderBoardTest() throws Exception {
         // given
         LeaderBoardRow leaderBoardRow1 = new LeaderBoardRow(1L, 500L);
         LeaderBoardRow leaderBoardRow2 = new LeaderBoardRow(2L, 400L);

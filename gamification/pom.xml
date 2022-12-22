@@ -15,7 +15,7 @@
 	<description>Gamification Microservice - Learn Microservices with Spring Boot - Book - Chapter 6</description>
 
 	<properties>
-		<java.version>14</java.version>
+		<java.version>15</java.version>
 	</properties>
 
 	<dependencies>
@@ -68,6 +68,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${project.parent.version}</version>
 			</plugin>
 		</plugins>
 	</build>

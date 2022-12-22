@@ -18,7 +18,7 @@ import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.BDDMockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class ChallengeServiceTest {
+class ChallengeServiceTest {
 
     private ChallengeService challengeService;
 
@@ -39,7 +39,7 @@ public class ChallengeServiceTest {
     }
 
     @Test
-    public void checkCorrectAttemptTest() {
+    void checkCorrectAttemptTest() {
         // given
         given(attemptRepository.save(any()))
                 .will(returnsFirstArg());
@@ -58,7 +58,7 @@ public class ChallengeServiceTest {
     }
 
     @Test
-    public void checkWrongAttemptTest() {
+    void checkWrongAttemptTest() {
         // given
         given(attemptRepository.save(any()))
                 .will(returnsFirstArg());
@@ -77,7 +77,7 @@ public class ChallengeServiceTest {
     }
 
     @Test
-    public void checkExistingUserTest() {
+    void checkExistingUserTest() {
         // given
         given(attemptRepository.save(any()))
                 .will(returnsFirstArg());
@@ -100,7 +100,7 @@ public class ChallengeServiceTest {
     }
 
     @Test
-    public void retrieveStatsTest() {
+    void retrieveStatsTest() {
         // given
         User user = new User("john_doe");
         ChallengeAttempt attempt1 = new ChallengeAttempt(1L, user, 50, 60, 3010, false);

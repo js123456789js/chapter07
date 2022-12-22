@@ -30,7 +30,7 @@ class ChallengeEventPubTest {
 
     @ParameterizedTest
     @ValueSource(booleans = {true, false})
-    public void sendsAttempt(boolean correct) {
+    void sendsAttempt(boolean correct) {
         // given
         ChallengeAttempt attempt = createTestAttempt(correct);
 

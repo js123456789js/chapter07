@@ -51,7 +51,7 @@ public class AMQPConfiguration {
     @Bean
     public RabbitListenerConfigurer rabbitListenerConfigurer(
             final MessageHandlerMethodFactory messageHandlerMethodFactory) {
-        return (c) -> c.setMessageHandlerMethodFactory(messageHandlerMethodFactory);
+        return c -> c.setMessageHandlerMethodFactory(messageHandlerMethodFactory);
     }
 
 }

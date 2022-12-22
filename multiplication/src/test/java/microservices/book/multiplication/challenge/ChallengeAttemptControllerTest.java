@@ -17,7 +17,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.List;
 
 import static org.assertj.core.api.BDDAssertions.then;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -48,7 +47,7 @@ class ChallengeAttemptControllerTest {
         ChallengeAttemptDTO attemptDTO = new ChallengeAttemptDTO(50, 70, "john", 3500);
         ChallengeAttempt expectedResponse = new ChallengeAttempt(attemptId, user, 50, 70, 3500, true);
         given(challengeService
-                .verifyAttempt(eq(attemptDTO)))
+                .verifyAttempt(attemptDTO))
                 .willReturn(expectedResponse);
 
         // when
@@ -81,7 +80,7 @@ class ChallengeAttemptControllerTest {
     }
 
     @Test
-    public void getUserStats() throws Exception {
+    void getUserStats() throws Exception {
         // given
         User user = new User("john_doe");
         ChallengeAttempt attempt1 = new ChallengeAttempt(1L, user, 50, 70, 3500, true);
