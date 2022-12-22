@@ -46,7 +46,7 @@ Requirements:
     ```bash
     multiplication$ ./mvnw spring-boot:run
    # You can also just run: 
-   # multiplication$ mvn spring-boot:run
+   # multiplication mvn spring-boot:run
     ```
 2. To start the Gamification microservice, you do the same from its corresponding folder:
     ```bash
